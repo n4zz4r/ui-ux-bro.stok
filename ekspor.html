@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ekspor • stok.bro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script defer src="js/ekspor.js"></script>
+</head>
+<body>
+  <header class="section-header">
+    <span class="material-icons back-icon" onclick="window.location.href='dashboard.html'">arrow_back</span>
+    <span class="section-title">Ekspor Data</span>
+  </header>
+  <main class="ekspor-main">
+    <div class="ekspor-card-wrap">
+      <button class="big-export-btn" id="btnEksporProduk">
+        <span class="material-icons export-icon">download</span>
+        Ekspor Data Produk (CSV/Excel)
+      </button>
+      <button class="big-export-btn" id="btnEksporRiwayat">
+        <span class="material-icons export-icon">download</span>
+        Ekspor Data Riwayat (CSV/Excel)
+      </button>
+    </div>
+    <div class="ekspor-desc">File CSV/Excel akan diunduh, notifikasi muncul saat berhasil.</div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="dashboard.html" class="nav-item"><span class="material-icons">home</span>Beranda</a>
+    <a href="produk.html" class="nav-item"><span class="material-icons">inventory_2</span>Produk</a>
+    <a href="stok.html" class="nav-item"><span class="material-icons">move_up</span>Stok</a>
+    <a href="riwayat.html" class="nav-item"><span class="material-icons">history</span>Riwayat</a>
+    <a href="profit.html" class="nav-item"><span class="material-icons">equalizer</span>Profit</a>
+    <a href="profil.html" class="nav-item"><span class="material-icons">person</span>Akun</a>
+  </nav>
+  <div class="snackbar" id="snackbar"></div>
+</body>
+</html>

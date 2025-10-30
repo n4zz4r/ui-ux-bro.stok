@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Riwayat • stok.bro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script defer src="js/riwayat.js"></script>
+</head>
+<body>
+  <header class="section-header">
+    <span class="material-icons back-icon" onclick="window.location.href='dashboard.html'">arrow_back</span>
+    <span class="section-title">Riwayat</span>
+  </header>
+  <main class="riwayat-main">
+    <div class="filter-row">
+      <select id="filterJenis">
+        <option value="">Semua</option>
+        <option value="masuk">Stok Masuk</option>
+        <option value="keluar">Stok Keluar</option>
+        <option value="opname">Penyesuaian</option>
+      </select>
+      <input type="date" id="filterTanggal">
+      <button class="btn btn-primary" id="filterBtn"><span class="material-icons">filter_alt</span>Filter</button>
+    </div>
+    <section id="riwayatTableWrap" class="mobile-table-wrap">
+      <!-- Data table diisi JS -->
+      <table id="riwayatTable" class="mobile-table">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Produk</th>
+            <th>Jenis</th>
+            <th>Jumlah</th>
+            <th>User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="5">-- data riwayat belum tersedia --</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="pagination-row">
+      <button id="prevPage" class="btn btn-secondary">&laquo;</button>
+      <span id="pageIndicator">1</span>
+      <button id="nextPage" class="btn btn-secondary">&raquo;</button>
+    </div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="dashboard.html" class="nav-item"><span class="material-icons">home</span>Beranda</a>
+    <a href="produk.html" class="nav-item"><span class="material-icons">inventory_2</span>Produk</a>
+    <a href="stok.html" class="nav-item"><span class="material-icons">move_up</span>Stok</a>
+    <a href="riwayat.html" class="nav-item active"><span class="material-icons">history</span>Riwayat</a>
+    <a href="profit.html" class="nav-item"><span class="material-icons">equalizer</span>Profit</a>
+    <a href="profil.html" class="nav-item"><span class="material-icons">person</span>Akun</a>
+  </nav>
+  <div class="snackbar" id="snackbar"></div>
+</body>
+</html>

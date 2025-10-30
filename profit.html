@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profit • stok.bro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script defer src="js/chart.min.js"></script>
+  <script defer src="js/profit.js"></script>
+</head>
+<body>
+  <header class="section-header">
+    <span class="material-icons back-icon" onclick="window.location.href='dashboard.html'">arrow_back</span>
+    <span class="section-title">Analisis Profit</span>
+  </header>
+  <main class="profit-main">
+    <div class="profit-list" id="profitList">
+      <!-- List produk & margin by JS -->
+    </div>
+    <section class="profit-graph">
+      <h3 class="section-title">Grafik Margin Produk</h3>
+      <canvas id="profitChart" width="355" height="180"></canvas>
+    </section>
+  </main>
+  <nav class="bottom-nav">
+    <a href="dashboard.html" class="nav-item"><span class="material-icons">home</span>Beranda</a>
+    <a href="produk.html" class="nav-item"><span class="material-icons">inventory_2</span>Produk</a>
+    <a href="stok.html" class="nav-item"><span class="material-icons">move_up</span>Stok</a>
+    <a href="riwayat.html" class="nav-item"><span class="material-icons">history</span>Riwayat</a>
+    <a href="profit.html" class="nav-item active"><span class="material-icons">equalizer</span>Profit</a>
+    <a href="profil.html" class="nav-item"><span class="material-icons">person</span>Akun</a>
+  </nav>
+  <div class="snackbar" id="snackbar"></div>
+</body>
+</html>

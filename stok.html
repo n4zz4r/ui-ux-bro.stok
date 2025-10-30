@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Stok • stok.bro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script defer src="js/stok.js"></script>
+</head>
+<body>
+  <header class="section-header">
+    <span class="material-icons back-icon" onclick="window.location.href='dashboard.html'">arrow_back</span>
+    <span class="section-title">Operasi Stok</span>
+  </header>
+  <main class="stok-main">
+    <div class="tab-row">
+      <button class="tab-btn active" data-tab="masuk">Stok Masuk</button>
+      <button class="tab-btn" data-tab="keluar">Stok Keluar</button>
+      <button class="tab-btn" data-tab="opname">Penyesuaian</button>
+    </div>
+    <!-- Form di-display sesuai tab yang aktif (Masuk/Keluar/Opname) oleh JS -->
+    <div id="formTabMasuk" class="stok-form-section">
+      <form id="formStokMasuk">
+        <div class="form-group">
+          <label for="produkMasuk">Produk/Varian</label>
+          <select id="produkMasuk" required>
+            <option value="">Pilih Produk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jumlahMasuk">Jumlah Masuk</label>
+          <input id="jumlahMasuk" type="number" min="1" value="1" required>
+        </div>
+        <div class="form-group">
+          <label for="catatanMasuk">Catatan (Optional)</label>
+          <input id="catatanMasuk" type="text" maxlength="45">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Simpan</button>
+      </form>
+    </div>
+    <div id="formTabKeluar" class="stok-form-section" style="display:none;">
+      <form id="formStokKeluar">
+        <div class="form-group">
+          <label for="produkKeluar">Produk/Varian</label>
+          <select id="produkKeluar" required>
+            <option value="">Pilih Produk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jumlahKeluar">Jumlah Keluar</label>
+          <input id="jumlahKeluar" type="number" min="1" value="1" required>
+        </div>
+        <div class="form-group">
+          <label for="catatanKeluar">Catatan (Optional)</label>
+          <input id="catatanKeluar" type="text" maxlength="45">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Simpan</button>
+      </form>
+    </div>
+    <div id="formTabOpname" class="stok-form-section" style="display:none;">
+      <form id="formStokOpname">
+        <div class="form-group">
+          <label for="produkOpname">Produk/Varian</label>
+          <select id="produkOpname" required>
+            <option value="">Pilih Produk</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jumlahOpname">Jumlah Penyesuaian</label>
+          <input id="jumlahOpname" type="number" min="-9999" value="0" required>
+        </div>
+        <div class="form-group">
+          <label for="catatanOpname">Catatan (Optional)</label>
+          <input id="catatanOpname" type="text" maxlength="45">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Simpan</button>
+      </form>
+    </div>
+  </main>
+  <nav class="bottom-nav">
+    <a href="dashboard.html" class="nav-item"><span class="material-icons">home</span>Beranda</a>
+    <a href="produk.html" class="nav-item"><span class="material-icons">inventory_2</span>Produk</a>
+    <a href="stok.html" class="nav-item active"><span class="material-icons">move_up</span>Stok</a>
+    <a href="riwayat.html" class="nav-item"><span class="material-icons">history</span>Riwayat</a>
+    <a href="profit.html" class="nav-item"><span class="material-icons">equalizer</span>Profit</a>
+    <a href="profil.html" class="nav-item"><span class="material-icons">person</span>Akun</a>
+  </nav>
+  <div class="snackbar" id="snackbar"></div>
+</body>
+</html>
